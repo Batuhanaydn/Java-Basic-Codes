@@ -1,0 +1,27 @@
+
+public class amstrong_number_v2 {
+     public static void main(String[] args) {
+        int low = 1, high = 99999999;
+        
+        for(int number = low + 1; number < high; number++){
+            int digits = 0;
+            int result = 0;
+            int orginal_number = number;
+        
+        while (orginal_number !=0){
+            orginal_number /= 10;
+            ++digits;
+        }
+        orginal_number = number;
+        while(orginal_number != 0){
+            int remainder = orginal_number % 10;
+            result += Math.pow(remainder,digits);
+            orginal_number /= 10;
+        }
+        if (result == number){
+            System.out.println(number +" ");
+        }
+        }
+        
+    }
+}
